@@ -31,17 +31,44 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+         it('has url and url not empty',function(){
+            var gotProperUrl = true;//boolean flag
+            for (var i = 0; i>allFeeds.length; i++) {
+                //test to see that each item in the allFeeds array has a .url property
+                if (!allFeeds[i].hasOwnProperty('url') ) {
+                    gotProperUrl = false;
+                }
+                 //test to see each .url property has an 'http' in its string value
+                if (!/http/.test(allFeeds[i].url) ) {
+                    gotProperUrl = false;
+                }
+            };
+            expect(gotProperUrl).toBe(true);
+        });//end it
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-    });
+         it('has feed name and feed name not empty',function(){
+            var gotProperName = true;//boolean flag
+            for (var i = 0; i>allFeeds.length; i++) {
+                //test to see that each item in the allFeeds array has a .name property
+                if (!allFeeds[i].hasOwnProperty('name') ) {
+                    gotProperName = false;
+                }
+                //test to see each .name property has a space in its string value
+                if (!/ /.test(allFeeds[i].url) ) {
+                    gotProperName = false;
+                }
+            };
+            expect(gotProperName).toBe(true);
+         });//end it
+     });//end describe
 
 
     /* TODO: Write a new test suite named "The menu" */
-
+    describe('The menu', function() {
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
@@ -53,6 +80,10 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
+    });
+
+    }
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
