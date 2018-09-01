@@ -77,24 +77,27 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-         it('is hidden', function() {
+        it('is hidden', function() {
+            //if menu is hidden, body should have a class menu-hidden
             let gotHiddenClass = $('body').hasClass('menu-hidden');
             expect(gotHiddenClass).toBe(true);
-         });//end it
+        });//end it
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-         it('toggles on click',function() {
+        it('toggles on click',function() {
+            //select menu icon using jquery, then trigger a click, the body should lose the menu-hidden class
             let menuIconTest = $('.menu-icon-link');
             menuIconTest.trigger('click');
             expect($('body').hasClass('')).toBe(true);
 
+            //trigger a click again, the body should have the class menu-hidden toggle back again
             menuIconTest.trigger('click');
             expect($('body').hasClass('menu-hidden')).toBe(true);
-          });//end it
+        });//end it
 
     });//end describe
 
@@ -128,12 +131,15 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        var firstArticles = [];
+        var firstArticles = [];//array container that will contain the
+        //titles of the first articles of two different feed categories
+
+        //getH2Title function we will call in both asynchronous calls of loadfeed below, designed
+        //to fetch the text of the article titles
         var getH2Title = function() {
             var feedList = $('.feed').find('article.entry');
             var articleH2 = $(feedList[0]).find('h2');
             var articleH2Text = $(articleH2).text();
-            console.log(articleH2Text);
             firstArticles.push(articleH2Text);
         };
 
@@ -150,8 +156,8 @@ $(function() {
 
         it('changes content', function(done) {
             //remember, firstArticles array contains text from first css feed and first ublog feed
-            console.log(firstArticles[0] + "****************");
-            console.log(firstArticles[1] + "****************");
+            console.log(firstArticles[0]);
+            console.log(firstArticles[1]);
             expect(firstArticles[0]).not.toContain(firstArticles[1]);
             done();
         });//end it
