@@ -68,7 +68,7 @@ function init() {
                  entries.forEach(function(entry) {
                      container.append(entryTemplate(entry));
                  });
-
+                 //if a second parameter was provided, a cb, execute
                  if (cb) {
                      cb();
                  }
@@ -81,6 +81,7 @@ function init() {
                },
        dataType: "json"
      });
+
  }
 
 /* Google API: Loads the Feed Reader API and defines what function
@@ -120,7 +121,6 @@ $(function() {
         var item = $(this);
 
         $('body').addClass('menu-hidden');
-        console.log(' a link clicked in .feedList menu hidden');//lg added
         loadFeed(item.data('id'));
         return false;
     });
@@ -129,7 +129,6 @@ $(function() {
      * on the body to perform the hiding/showing of our menu.
      */
     menuIcon.on('click', function() {
-        console.log('menuIcon clicked- menu-hidden class toggled');//lg added
         $('body').toggleClass('menu-hidden');
     });
 }());
