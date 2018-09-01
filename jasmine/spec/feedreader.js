@@ -45,7 +45,6 @@ $(function() {
                     gotProperUrl = false;
                 }
             };
-            console.log('expect_' + gotProperUrl + '_to be true');
             expect(gotProperUrl).toBe(true);
         });//end it
 
@@ -65,7 +64,6 @@ $(function() {
                     gotProperName = false;
                 }
             };
-            console.log('expect_' + gotProperName + '_to be true');
             expect(gotProperName).toBe(true);
          });//end it
 
@@ -81,7 +79,6 @@ $(function() {
          */
          it('is hidden', function() {
             let gotHiddenClass = $('body').hasClass('menu-hidden');
-            console.log('expect_' + gotHiddenClass + '_to be true');
             expect(gotHiddenClass).toBe(true);
          });//end it
 
@@ -93,11 +90,9 @@ $(function() {
          it('toggles on click',function() {
             let menuIconTest = $('.menu-icon-link');
             menuIconTest.trigger('click');
-            console.log($('body').hasClass(''));
             expect($('body').hasClass('')).toBe(true);
 
             menuIconTest.trigger('click');
-            console.log($('body').hasClass('menu-hidden'));
             expect($('body').hasClass('menu-hidden')).toBe(true);
           });//end it
 
@@ -114,15 +109,12 @@ $(function() {
          */
          beforeEach(function(done) {
             loadFeed(0, function() {
-                console.log(done + '_you\'re so wordy!');
                 done();
             });
          });
 
          it('has an article.entry element in .feed container', function(done) {
             let entryInFeed = $('.feed').find('article.entry');
-            console.log(entryInFeed[0]);
-            console.log(entryInFeed[1000]);
             expect(entryInFeed[0]).toBeDefined();
             done();
          });//end it
