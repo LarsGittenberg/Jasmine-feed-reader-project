@@ -31,7 +31,7 @@ Whether you work in an organization that uses test-driven development or in an o
 You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
 ## <a name="dependencies"></a>Dependencies
-The project uses several CDNs and dependencies - you will need to have internet access and a browser for the Jasmine framework + it's dependencies to work. Among the CDNs you'll need:
+The project uses several CDNs and dependencies - you will need to have internet access and a browser for the feed reader app + it's dependencies to work. Among the CDNs you'll need:
 - [Google Font Library](http://fonts.googleapis.com)
 - [jQuery's CDN Library](https://code.jquery.com/jquery/)
 
