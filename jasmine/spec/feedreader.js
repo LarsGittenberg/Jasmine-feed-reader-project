@@ -132,15 +132,15 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        var firstArticles = [];//array container that will contain the
+        let firstArticles = [];//array container that will contain the
         //titles of the first articles of two different feed categories
 
         //getH2Title function we will call in both asynchronous calls of loadfeed below, designed
         //to fetch the text of the article titles and pushed into the [] array 'firstArticles'
-        var getH2Title = function() {
-            var feedList = $('.feed').find('article.entry');
-            var articleH2 = $(feedList[0]).find('h2');
-            var articleH2Text = $(articleH2).text();
+        let getH2Title = function() {
+            let feedList = $('.feed').find('article.entry');
+            let articleH2 = $(feedList[0]).find('h2');
+            let articleH2Text = $(articleH2).text();
             firstArticles.push(articleH2Text);
         };
 
