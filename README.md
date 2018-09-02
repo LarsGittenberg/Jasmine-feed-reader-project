@@ -1,11 +1,11 @@
 # Feed Reader Testing Project
 
-- Project: Using Jasmine, a testing framework for javascript, student is tasked with setting suites of tests for "test-driven development" of a browser based feed reader app. The feed reader app's html, css and js are already built, but the Jasmine tests are left incomplete, for which the student is left to build up.
-- This project is a student submission, and the Jasmine tests have been implemented (Udacity review pending).
+- About this Project: Using Jasmine, a testing framework for javascript, Udacity student is tasked with setting suites of tests for "test-driven development" of a browser based feed reader app. The feed reader app's html, css and js are already built, but the Jasmine tests are left incomplete, for which the student is left to build up.
 - The project is part of the requirements for completion of [Udacity's Front End Web Development Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 - This project assumes that the student has gone through Udacity's Course on [Javascript Testing ](https://www.udacity.com/course/javascript-testing--ud549) with Mike Wales.
 - The project files have been cloned from Udacity's [Feed Reader Testing Project in Github](https://github.com/udacity/frontend-nanodegree-feedreader).
 - You can view Udacity's rubric/instructions for students in the [Udacity Classroom](https://classroom.udacity.com/me).
+- About this repository: This repo is a student project submission, and the Jasmine tests have been implemented (Udacity review pending).
 
 
 ## Table of Contents
@@ -61,7 +61,7 @@ This project is already complete/solved (Udacity review pending). To inspect beh
 
 If you're curious what this looks like, in spec/feedreader.js look for a line that has an expect() function. For example, one of the  first tests has the code line:
 ```expect(gotProperUrl).toBe(true);```
-Change the toBe() input to 'false' and reload index.html
+Change the toBe() input to 'false' and reload index.html by re-freshing your browser.
 
 
 
