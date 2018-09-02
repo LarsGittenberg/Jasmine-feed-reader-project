@@ -46,22 +46,22 @@ For the 'feed reader app' functionality, the following files are needed, and are
 
 For the Jasmine testing framework functionality, all files are also already included. For future reference, they can be obtained and downloaded from the [Jasmine Github repo](https://github.com/jasmine/jasmine). There you'll find detailed instructions on the necessary script files that need to be called in your html file.
 
-In Jasmine based 'test driven development', you the tester would normally need to create a js 'spec' file where you'll build your test suite and specs. For this project, it already comes with a spec file, named feedreader.js file. You'll find it in the jasmine/spec subfolder.
-
-This project is already complete/solved (Udacity review pending). To inspect, open index.html in a browser. You'll see the feed reader in action, with sliding menu and dynamic feed depending on the category selected from menu. If you scroll down to the bottom of the index page, you will see the Jasmine tester functionality. All of the tests should have passed, and the current state of the specs should be green, ie the test passed. Each green dot represents a passed test. Test that fail will be in red 'x's, with Jasmine explaining the test and what the actual expected outcome should have been.
-
-If you're curious what this looks like, in spec/feedreader.js look for a line that has an expect() function. For example, one of the  first tests has the code line:
-```expect(gotProperUrl).toBe(true);```
-Change the toBe() input to 'false' and reload index.html
+In Jasmine based 'test driven development', you the tester would normally need to create a js 'spec' file where you'll code and build your test suite and specs. For this project, it already comes with a spec file, named feedreader.js file. You'll find it in the jasmine/spec subfolder. Since this project is complete, the Jasmine suite of expecations/tests have already been built up as js code.
 
 ## <a name="projectgoal"></a>Project Goal
 - The project goal is to work in a red/green refactoring process, analyzing the functionality of the Feed Reader app in app.js, along with its related html and css, build up a suite of behavioral expactations, and then testing those expectations.
 
 ## <a name="projectbehavior"></a>Project Workflow/Behavior
-- Jasmine provides the tester with built-in testing functions such as describe() and it(), along with other helper functions such as done(). You, the coder, will use your JS know-how and build a suite of these testing functions and test them against expected outcomes based on the intended behavior of the feed reader app. To learn more about Jasmine's tester functions and nomenclature visit:
+- Jasmine provides the tester with built-in testing functions such as describe() and it(), along with other helper functions such as done() and beforeEach(). You, the coder, will use your JS know-how and build a suite of these testing functions and test them against expected outcomes based on the intended behavior of the feed reader app. To learn more about Jasmine's tester functions and nomenclature visit:
 - [Jasmine Documentation Page](https://jasmine.github.io/pages/getting_started.html)
 
 - [Jasmine Functions Introduction Tutorial](https://jasmine.github.io/2.0/introduction.html)
+
+This project is already complete/solved (Udacity review pending). To inspect behavior of this completed project, open index.html in a browser. You'll see the feed reader in action, with sliding menu and dynamic feed depending on the category selected from menu. If you scroll down to the bottom of the index page, you will see the Jasmine tester functionality. All of the tests should have passed, and the current state of the specs should be green, ie the test passed. Each green dot represents a passed test. Test that fail will be in red 'x's, with Jasmine explaining the test and what the actual expected outcome should have been.
+
+If you're curious what this looks like, in spec/feedreader.js look for a line that has an expect() function. For example, one of the  first tests has the code line:
+```expect(gotProperUrl).toBe(true);```
+Change the toBe() input to 'false' and reload index.html
 
 
 
