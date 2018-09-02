@@ -29,7 +29,7 @@ Whether you work in an organization that uses test-driven development or in an o
 You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
 ## <a name="dependencies"></a>Dependencies
-The project uses several CDNs and dependencies - you will need to have internet access and a browser for the Jasmine framework + it's dependencies to work:
+The project uses several CDNs and dependencies - you will need to have internet access and a browser for the Jasmine framework + it's dependencies to work. Among the CDNs you'll need:
 - [Google Font Library](http://fonts.googleapis.com)
 - [jQuery's CDN Library](https://code.jquery.com/jquery/)
 
@@ -44,7 +44,7 @@ For the 'feed reader app' functionality, the following files are needed, and are
 
 For the Jasmine testing framework functionality, all files are also already included. For future reference, they can be obtained and downloaded from the [Jasmine Github repo](https://github.com/jasmine/jasmine). There you'll find detailed instructions on the necessary script files that need to be called in your html file.
 
-In Jasmine based 'test driven development', you the tester would normally need to create a js file where you'll build your test suite and specs. For this project, it already comes with a spec file, named feedreader.js file. You'll find it in the jasmine/spec subfolder.
+In Jasmine based 'test driven development', you the tester would normally need to create a js 'spec' file where you'll build your test suite and specs. For this project, it already comes with a spec file, named feedreader.js file. You'll find it in the jasmine/spec subfolder.
 
 
 ## <a name="projectgoal"></a>Project Goal
