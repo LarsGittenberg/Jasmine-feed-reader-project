@@ -116,7 +116,14 @@ $(function() {
                 done();
             });
          });
-
+         /*
+         beforeEach version below is more 'dry' than above:
+         beforeEach(function(done) {
+            loadFeed(0, done);
+         });
+         But will keep the more 'verbose' code as it helps me think of
+         how to solve the 'double' asynchronous functions in 'New Feed Selection' suite
+         */
          it('has an article.entry element in .feed container', function(done) {
             let entryInFeed = $('.feed').find('article.entry');
             expect(entryInFeed[0]).toBeDefined();
