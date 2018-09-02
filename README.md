@@ -52,9 +52,9 @@ In Jasmine based 'test driven development', you the tester would normally need t
 
 ## <a name="projectbehavior"></a>Project Workflow/Behavior
 - Jasmine provides the tester with built-in testing functions such as describe() and it(), along with other helper functions such as done(). You, the coder, will use your JS know-how and build a suite of these testing functions and test them against expected outcomes based on the intended behavior of the feed reader app. To learn more about Jasmine's tester functions and nomenclature visit:
-### [Jasmine Documentation Page](https://jasmine.github.io/pages/getting_started.html)
+- [Jasmine Documentation Page](https://jasmine.github.io/pages/getting_started.html)
 
-### [Jasmine Functions Introduction Tutorial](https://jasmine.github.io/2.0/introduction.html)
+- [Jasmine Functions Introduction Tutorial](https://jasmine.github.io/2.0/introduction.html)
 
 
 
