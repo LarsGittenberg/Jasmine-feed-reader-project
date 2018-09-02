@@ -1,7 +1,8 @@
 # Feed Reader Testing Project
 
-- Project: Using Jasmine, a testing framework for javascript, student is tasked with setting suites of tests for "test-driven development" of a browser based feed reader app. The feed reader app's html, css and js are already built, but the Jasmine tests are incomplete, and needs to be built up by the student using javascript.
-- This project's Jasmine tests have been implemented, and is a student submission for completion of [Udacity's Front End Web Development Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001).
+- Project: Using Jasmine, a testing framework for javascript, student is tasked with setting suites of tests for "test-driven development" of a browser based feed reader app. The feed reader app's html, css and js are already built, but the Jasmine tests are left incomplete, for which the student is left to build up.
+- This project is a student submission, and the Jasmine tests have been implemented (Udacity review pending).
+- The project is part of the requirements for completion of [Udacity's Front End Web Development Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 - This project assumes that the student has gone through Udacity's Course on [Javascript Testing ](https://www.udacity.com/course/javascript-testing--ud549) with Mike Wales.
 - The project files have been cloned from Udacity's [Feed Reader Testing Project in Github](https://github.com/udacity/frontend-nanodegree-feedreader).
 - You can view Udacity's rubric/instructions for students in the [Udacity Classroom](https://classroom.udacity.com/me).
@@ -15,7 +16,8 @@
 - [Project Goal](#projectgoal)
 - [Project Behavior](#projectbehavior)
 
-## <a name="bkginfo"></a>Background Info (excerpted from original Udacity Project readme file)
+## <a name="bkginfo"></a>Background Info
+_(excerpted from original Udacity Project readme file)_
 
 ### Why this Project?
 
