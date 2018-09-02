@@ -37,6 +37,7 @@ $(function() {
             let gotProperUrl = true;//boolean flag
             for (let i = 0; i<allFeeds.length; i++) {
                 //test to see that each item in the allFeeds array has a .url property
+                //gotProperUrl changes to false if any of the feeds does not have a .url property
                 if (!allFeeds[i].hasOwnProperty('url') ) {
                     gotProperUrl = false;
                 }
@@ -158,6 +159,7 @@ $(function() {
             //remember, firstArticles array contains text from first css feed and first ublog feed
             console.log(firstArticles[0]);
             console.log(firstArticles[1]);
+
             expect(firstArticles[0]).not.toContain(firstArticles[1]);
             done();
         });//end it
