@@ -93,7 +93,7 @@ $(function() {
             //select menu icon using jquery, then trigger a click, the body should lose the menu-hidden class
             let menuIconTest = $('.menu-icon-link');
             menuIconTest.trigger('click');
-            expect($('body').hasClass('')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(false);
 
             //trigger a click again, the body should have the class menu-hidden toggle back again
             menuIconTest.trigger('click');
@@ -136,7 +136,7 @@ $(function() {
         //titles of the first articles of two different feed categories
 
         //getH2Title function we will call in both asynchronous calls of loadfeed below, designed
-        //to fetch the text of the article titles
+        //to fetch the text of the article titles and pushed into the [] array 'firstArticles'
         var getH2Title = function() {
             var feedList = $('.feed').find('article.entry');
             var articleH2 = $(feedList[0]).find('h2');
