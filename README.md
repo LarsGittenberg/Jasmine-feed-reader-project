@@ -50,7 +50,7 @@ In Jasmine based 'test driven development', you the tester would normally need t
 
 This project is already complete/solved (Udacity review pending). To inspect, open index.html in a browser. You'll see the feed reader in action, with sliding menu and dynamic feed depending on the category selected from menu. If you scroll down to the bottom of the index page, you will see the Jasmine tester functionality. All of the tests should have passed, and the current state of the specs should be green, ie the test passed. Each green dot represents a passed test. Test that fail will be in red 'x's, with Jasmine explaining the test and what the actual expected outcome should have been.
 
-If you're curious what this looks like, look for a line that has an expect() function. For example, one of the  first tests has the code line:
+If you're curious what this looks like, in spec/feedreader.js look for a line that has an expect() function. For example, one of the  first tests has the code line:
 ```expect(gotProperUrl).toBe(true);```
 Change the toBe() input to 'false' and reload index.html
 
