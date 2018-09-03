@@ -150,20 +150,18 @@ $(function() {
             let articleH2Text = $(articleH2).text();
             firstArticles.push(articleH2Text);
         };
-
+        //note that loadFeed(0), an async fx, contains a callback, another async fx, loadFeed(1)
         beforeEach(function(done) {
 
             loadFeed(0, function() {
 
-                // feed 0 done loading
-
-                //prevFeedData = ...or get the title of the first article from this feed
+                //feed 0 done loading!
+                //get the title of the first article from this feed/loadFeed0
                 getH2Title();
                 loadFeed(1, function(){
 
-                    // feed 1 done loading
-
-                    //newFeedData= ...or get the title of the first article from this feed
+                    //feed 1 done loading!
+                    //get the title of the first article from this feed/loadFeed1
                     getH2Title();
                     // all variables initialized, can begin tests
 
