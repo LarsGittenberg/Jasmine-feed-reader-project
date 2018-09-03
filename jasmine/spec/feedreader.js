@@ -152,15 +152,27 @@ $(function() {
         };
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                getH2Title();
-            });
 
-            loadFeed(1, function() {
+            loadFeed(0, function() {
+
+                // feed 0 done loading
+
+                //prevFeedData = ...or get the title of the first article from this feed
                 getH2Title();
-                done();
-            });
-        });//end beforeeach
+                loadFeed(1, function(){
+
+                    // feed 1 done loading
+
+                    //newFeedData= ...or get the title of the first article from this feed
+                    getH2Title();
+                    // all variables initialized, can begin tests
+
+                    done();
+
+                });//end loadFeed1
+            });//end loadFeed0
+
+        });//end beforeEach
 
         it('changes content', function(done) {
             //remember, firstArticles array contains text from first css feed and first ublog feed
