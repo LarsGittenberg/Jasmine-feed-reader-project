@@ -33,40 +33,25 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it('has url and url not empty',function(){
-            let gotProperUrl = true;//boolean flag
-            for (let i = 0; i<allFeeds.length; i++) {
-                //test to see that each item in the allFeeds array has a .url property
-                //gotProperUrl changes to false if any of the feeds does not have a .url property
-                if (!allFeeds[i].hasOwnProperty('url') ) {
-                    gotProperUrl = false;
-                }
-                 //test to see each .url property has an 'http' in its string value
-                if (!/http/.test(allFeeds[i].url) ) {
-                    gotProperUrl = false;
-                }
-            };
-            expect(gotProperUrl).toBe(true);
+         //changed it spec per udacity review...see original solution using 'hasOwnProperty' technique in git history
+        it('url defined and url not empty', function() {
+            for(var i = 0; i<allFeeds.length; i++) {
+                expect(allFeeds[i].url).toBeDefined();
+                expect(allFeeds[i].url.length).not.toBe(0);
+            }
         });//end it
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+         //changed it spec per udacity review...see original solution using 'hasOwnProperty' technique in git history
         it('has feed name and feed name not empty',function(){
-            let gotProperName = true;//boolean flag
-            for (let i = 0; i<allFeeds.length; i++) {
-                //test to see that each item in the allFeeds array has a .name property
-                if (!allFeeds[i].hasOwnProperty('name') ) {
-                    gotProperName = false;
-                }
-                //test to see each .name property has a space in its string value
-                if (!/ /.test(allFeeds[i].name)) {
-                    gotProperName = false;
-                }
-            };
-            expect(gotProperName).toBe(true);
-         });//end it
+            for(var i = 0; i<allFeeds.length; i++) {
+                expect(allFeeds[i].name).toBeDefined();
+                expect(allFeeds[i].name.length).not.toBe(0);
+            }
+        });//end it
 
      });//end describe
 
@@ -150,24 +135,32 @@ $(function() {
             let articleH2Text = $(articleH2).text();
             firstArticles.push(articleH2Text);
         };
-        //note that loadFeed(0), an async fx, contains a callback, another async fx, loadFeed(1)
+        /*insde the beforeEach fx below note that loadFeed(0), an async fx,
+        contains a callback, another async fx, loadFeed(1).
+        This is structurally/conceptually different from my solution, where the beforeEach
+        fx contains two loadFeed calls on the same scope called sequentially, where only the
+        last loadFeed call has the jasmine callback done();
+        */
         beforeEach(function(done) {
 
             loadFeed(0, function() {
-
                 //feed 0 done loading!
                 //get the title of the first article from this feed/loadFeed0
+
                 getH2Title();
                 loadFeed(1, function(){
-
                     //feed 1 done loading!
                     //get the title of the first article from this feed/loadFeed1
                     getH2Title();
-                    // all variables initialized, can begin tests
 
-                    done();
+                    // all variables initialized, can begin tests, signal jasmine with done()
+                    done();//*** see note below
 
                 });//end loadFeed1
+                //done(); ....***note the done() call cannot be here inside loadFeed(0)!
+                //it must be inside loadFeed(1) because if inside loadFeed(0), loadfeed0 may 'exit' and
+                //erroneously signal jasmine all is done, and not wait for loadfeed(1) to execute.
+                //I think this is the point of the Udacity Review #1's comments.
             });//end loadFeed0
 
         });//end beforeEach
