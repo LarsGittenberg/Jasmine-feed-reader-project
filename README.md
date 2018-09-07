@@ -5,7 +5,7 @@
 - This project assumes that the student has gone through Udacity's Course on [Javascript Testing ](https://www.udacity.com/course/javascript-testing--ud549) with Mike Wales.
 - The project files have been cloned from Udacity's [Feed Reader Testing Project in Github](https://github.com/udacity/frontend-nanodegree-feedreader).
 - You can view Udacity's rubric/instructions for students in the [Udacity Classroom](https://classroom.udacity.com/me).
-- About this repository: This repo is a student project submission, and the Jasmine tests have been implemented (Udacity review pending).
+- About this repository: This repo is a student project submission, and the Jasmine tests have been implemented (Udacity reviewed and passed).
 
 
 ## Table of Contents
@@ -54,13 +54,12 @@ In Jasmine based 'test driven development', you the tester would normally need t
 ## <a name="projectbehavior"></a>Project Workflow/Behavior
 - Jasmine provides the tester with built-in testing functions such as describe() and it(), along with other helper functions such as done() and beforeEach(). You, the coder, will use your JS know-how and build a suite of these testing functions and test them against expected outcomes based on the intended behavior of the feed reader app. To learn more about Jasmine's tester functions and nomenclature visit:
 - [Jasmine Documentation Page](https://jasmine.github.io/pages/getting_started.html)
-
 - [Jasmine Functions Introduction Tutorial](https://jasmine.github.io/2.0/introduction.html)
 
-This project is already complete/solved (Udacity review pending). To inspect behavior of this completed project, open index.html in a browser. You'll see the feed reader in action, with sliding menu and dynamic feed depending on the category selected from menu. If you scroll down to the bottom of the index page, you will see the Jasmine tester functionality. All of the tests should have passed, and the current state of the specs should be green, ie the test passed. Each green dot represents a passed test. Test that fail will be in red 'x's, with Jasmine explaining the test and what the actual expected outcome should have been.
+This project is already complete/solved (Udacity reviewed and passed). To inspect behavior of this completed project, open index.html in a browser. You'll see the feed reader in action, with sliding menu and dynamic feed depending on the category selected from menu. If you scroll down to the bottom of the index page, you will see the Jasmine tester functionality. All of the tests should have passed, and the current state of the specs should be green, ie the test passed. Each green dot represents a passed test. Test that fail will be in red 'x's, with Jasmine explaining the test and what the actual expected outcome should have been.
 
-If you're curious what this looks like, in spec/feedreader.js look for a line that has an expect() function. For example, one of the  first tests has the code line:
-```expect(gotProperUrl).toBe(true);```
+If you're curious to see what this looks like in action, in spec/feedreader.js look for a lines that have an expect() function. For example, one of the tests has the code line:
+```expect(gotHiddenClass).toBe(true)```
 Change the toBe() input to 'false' and reload index.html by re-freshing your browser.
 
 
